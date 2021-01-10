@@ -5,7 +5,9 @@
   }
 
 .header {
-    background-color: aqua;
+    margin: 5px 5px;
+    border-radius: 5px;
+    background-color: rgb(207, 207, 207);
     height: 30px;
     display: flex;
     justify-content: space-between;
@@ -27,8 +29,14 @@
 }
 
 .container {
-    height: 500px;
+    background-image: url("../img/tech.jpeg");
+    background-size: cover;
+    margin: 5px 5px;
+    padding: 50px 200px;
+    border-radius: 5px;
+    height: auto;
     background-color: gainsboro;
+    border: solid 1px black
 }
 
 .start {
@@ -36,6 +44,36 @@
     justify-content: center;
     padding: 10px 0px;
 }
+
+.main {
+    overflow: hidden;
+    background-color: rgb(207, 207, 207);
+    padding-top: 10px;
+    border-radius: 5px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    height: auto;
+    justify-content: center;
+}
+
+.content {
+    padding: 25px 25px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* .content p {
+    width: 200px;
+} */
 
 #start {
     font-size: 20px;

@@ -8,19 +8,32 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <!-- HEADER -->
     <header>
       <div class="header">
-        <a href ="#">View High Scores</a>
+        <a href="#">View High Scores</a>
         <p id="countdown"><span>Time:</span> 75 seconds remaining</p>
       </div>
     </header>
+
+    <!-- MAIN BODY CONTAINER -->
     <div class="container">
-        <div class="main">
-            
+      <div class="main">
+        <div class="title" id="title">
+          <h2>Coding Quiz Challenge!</h2>
         </div>
+        <div class="content">
+          <p id="content">
+            Try to answer the following code-related questions within the time limit.
+            Keep in mind that incorrect answers will penalize your score/time by 10 seconds. </br>Please click the <b>"Start"</b> button below to begin!
+          </p>
+        </div>
+      </div>
     </div>
+
+    <!-- START BUTTON -->
     <div class="start">
-        <button id="start">Start</button>
+      <button id="start">Start</button>
     </div>
     <script src="./assets/js/script.js"></script>
   </body>
