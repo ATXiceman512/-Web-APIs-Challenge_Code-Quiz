@@ -11,8 +11,7 @@
     <!-- HEADER -->
     <header>
       <div class="header">
-        <a href="./hiscores.html">View High Scores</a>
-        <p id="countdown"><span>Time:</span> 75 seconds remaining</p>
+        <a href="./index.html">Back to Quiz Page</a>
       </div>
     </header>
 
@@ -20,22 +19,25 @@
     <div class="container">
       <div class="main">
         <div class="title" id="title">
-          <h2>Coding Quiz Challenge!</h2>
+          <h2>Hi Scores List</h2>
         </div>
         <div class="content">
           <p id="content">
-            Try to answer the following code-related questions within the time limit.
-            Keep in mind that incorrect answers will penalize your score/time by 10 seconds. </br>Please click the <b>"Start"</b> button below to begin!
+            Hi-score list needs to go here! Pull the scores from localStorage.
+            Also need to add "Clear Hi Scores" button.
           </p>
         </div>
       </div>
     </div>
 
     <!-- START BUTTON -->
-    <div class="start">
-      <button id="start">Start</button>
-      <button id="submit"></button>
+    <div class="goBack">
+      <button onclick="goBack()">Go Back</button>
+      <script>
+        function goBack() {
+          window.history.back();
+        }
+      </script>
     </div>
-    <script src="./assets/js/script.js"></script>
   </body>
 </html>

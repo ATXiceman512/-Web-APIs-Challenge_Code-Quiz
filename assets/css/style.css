@@ -1,74 +1,90 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 .header {
-    margin: 5px 5px;
-    border-radius: 5px;
-    background-color: rgb(207, 207, 207);
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: center;
-    border: solid 1px black;
+  margin: 5px 5px;
+  border-radius: 5px;
+  background-color: rgb(207, 207, 207);
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  border: solid 1px black;
 }
 
 .header p {
-    padding: 0px 15px 0px 0px;
+  padding: 0px 15px 0px 0px;
 }
 
 .header a {
-    padding: 0px 0px 0px 15px;    
+  padding: 0px 0px 0px 15px;
 }
 
-.header span{
-    font-weight: bold;
+.header span {
+  font-weight: bold;
 }
 
 .container {
-    background-image: url("../img/tech.jpeg");
-    background-size: cover;
-    margin: 5px 5px;
-    padding: 50px 200px;
-    border-radius: 5px;
-    height: auto;
-    background-color: gainsboro;
-    border: solid 1px black
+  background-image: url("../img/tech.jpeg");
+  background-size: cover;
+  margin: 5px 5px;
+  padding: 50px 200px;
+  border-radius: 5px;
+  height: auto;
+  background-color: gainsboro;
+  border: solid 1px black;
 }
 
 .start {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+}
+
+.goBack {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
 }
 
 .main {
-    overflow: hidden;
-    background-color: rgb(207, 207, 207);
-    padding-top: 10px;
-    border-radius: 5px;
-    height: auto;
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  overflow: hidden;
+  background-color: rgb(207, 207, 207);
+  padding-top: 10px;
+  border-radius: 5px;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .title {
-    width: 100%;
-    display: flex;
-    height: auto;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  height: auto;
+  justify-content: center;
 }
 
 .content {
-    padding: 25px 25px;
-    height: auto;
-    display: flex;
-    justify-content: center;
+  padding: 25px 25px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.content button{
+    margin: 5px 5px;
+    padding: 5px 5px;
+    background-color:white;
+}
+
+.content button:hover{
+    border: solid 1px green;
 }
 
 /* .content p {
@@ -76,5 +92,9 @@
 } */
 
 #start {
-    font-size: 20px;
+  font-size: 20px;
+}
+
+#goBack {
+  font-size: 20px;
 }
