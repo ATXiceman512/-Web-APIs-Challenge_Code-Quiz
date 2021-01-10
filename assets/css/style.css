@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+.header {
+    background-color: aqua;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    border: solid 1px black;
+}
+
+.header p {
+    padding: 0px 15px 0px 0px;
+}
+
+.header a {
+    padding: 0px 0px 0px 15px;    
+}
+
+.header span{
+    font-weight: bold;
+}
+
+.container {
+    height: 500px;
+    background-color: gainsboro;
+}
+
+.start {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+#start {
+    font-size: 20px;
+}
