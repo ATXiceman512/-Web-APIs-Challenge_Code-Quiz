@@ -3,8 +3,9 @@ var mainEl = document.getElementById('main');
 var startBtn = document.getElementById('start');
 var questionTitle = document.getElementById('title');
 var questionAnswerList = document.getElementById('content');
+var hiscores = document.getElementById('hiscores');
 var timeLeft = 75;
-var allQuestionsAnswered = false;
+var score = 0;
 
 // Set up the list of questions
 var questions = [
@@ -100,13 +101,23 @@ function countdown() {
       hiScores();
       clearInterval(timeInterval);
     }
-    if(questionsAnswered != questions.length){
+    if (questionsAnswered != questions.length) {
       formatQuestion(questionsAnswered);
       console.log("Running")
-    } else{
-      console.log("FINISHED");
+    } else {
+      timerEl.innerHTML = "<b>COMPLETED</b>";
+      score = correctAnswer / questions.length;
       questionTitle.textContent = "You have finished the quiz! Score: " + correctAnswer + " out of " + questions.length + " in " + (75 - timeLeft) + " seconds";
-      questionAnswerList.textContent = "";
+
+      questionAnswerList.textContent = "Please enter your name: ";
+      var input = document.createElement("input");
+      input.setAttribute("id", "userInput");
+      questionAnswerList.appendChild(input);
+
+      var submitHiScoreButton = document.createElement("button");
+      submitHiScoreButton.textContent = "Submit Hi-Score";
+      submitHiScoreButton.setAttribute("onclick", "input()");
+      questionAnswerList.appendChild(submitHiScoreButton);
       clearInterval(timeInterval);
     }
   }, 1000);
@@ -114,6 +125,7 @@ function countdown() {
 
 // Start timer
 startBtn.onclick = countdown;
+
 
 // Checks the answer the user has given
 function checkAnswer(clicked_id) {
@@ -128,12 +140,26 @@ function checkAnswer(clicked_id) {
       alert("Wrong! Deducting 10 seconds from Timer");
       timeLeft = timeLeft - 10;
     }
-    if(questionsAnswered != questions.length){
+    if (questionsAnswered != questions.length) {
       questionsAnswered++;
     }
   };
 }
 
+function input() {
+  var input = document.getElementById('userInput');
+  var userScore = score;
+  var hiScoreLength = localStorage.length;
+  
+  var combined = [
+    {
+      name: input.value,
+      score: userScore
+    }
+  ]
+  localStorage.setItem("Hi-Score " + (hiScoreLength + 1), JSON.stringify(combined));
 
-
-
+  for(i = 0; i < localStorage.length; i++){
+    console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
+  }
+}

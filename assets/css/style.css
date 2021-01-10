@@ -77,14 +77,14 @@
   justify-content: center;
 }
 
-.content button{
-    margin: 5px 5px;
-    padding: 5px 5px;
-    background-color:white;
+.content button {
+  margin: 5px 5px;
+  padding: 5px 5px;
+  background-color: white;
 }
 
-.content button:hover{
-    border: solid 1px green;
+.content button:hover {
+  border: solid 1px green;
 }
 
 /* .content p {
